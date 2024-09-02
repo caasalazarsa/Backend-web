@@ -38,7 +38,7 @@ def get_tasks():
 def create_task():
     if request.method == 'POST':
       if request.form not in tasks:
-         tasks.append(request.form)
+         tasks.append(request.get_json())
          print(tasks)
          return jsonify({'response':'Success'})
       
