@@ -11,3 +11,21 @@ response = requests.get(url)
 print(str(response))
 print('')
 print(json.dumps(response.json(), indent=4))
+
+
+url2 = 'http://localhost:5000/todo/api/v1.0/createtask'
+#url = 'https://0386-186-29-184-173.ngrok-free.app/todo/api/v1.0/tasks'
+
+myobj={
+        'id': 4,
+        'title': u'Calificar PIA',
+        'description': u'Revisar video, logo, eslogan y excel',
+        'done': False
+
+    }
+
+response = requests.post(url2,json=myobj)
+
+print(str(response))
+print('')
+print(json.dumps(response.json(), indent=4))
