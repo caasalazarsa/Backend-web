@@ -3,8 +3,8 @@
 import requests
 import json
 
-url = 'http://localhost:5000/todo/api/v1.0/tasks'
-#url = 'https://0386-186-29-184-173.ngrok-free.app/todo/api/v1.0/tasks'
+#url = 'http://localhost:5000/todo/api/v1.0/tasks'
+url = 'https://ffd0-190-60-223-122.ngrok-free.app/todo/api/v1.0/tasks'
 
 response = requests.get(url)
 
@@ -13,8 +13,8 @@ print('')
 print(json.dumps(response.json(), indent=4))
 
 
-url2 = 'http://localhost:5000/todo/api/v1.0/createtask'
-#url = 'https://0386-186-29-184-173.ngrok-free.app/todo/api/v1.0/tasks'
+#url2 = 'http://localhost:5000/todo/api/v1.0/createtask'
+url2 = 'https://ffd0-190-60-223-122.ngrok-free.app/todo/api/v1.0/createtask'
 
 myobj={
         'id': 4,
