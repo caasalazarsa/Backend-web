@@ -5,16 +5,17 @@ def run_client():
     # create a socket object
     client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    #server_ip = "127.0.0.1"  # replace with the server's IP address
-    #server_port = 8000  # replace with the server's port number
-    server_ip = "2.tcp.ngrok.io"  # replace with the server's IP address
-    server_port = 13872  # replace with the server's port number
+    server_ip = "127.0.0.1"  # replace with the server's IP address
+    server_port = 8000  # replace with the server's port number
+    #server_ip = "2.tcp.ngrok.io"  # replace with the server's IP address
+    #server_port = 13872  # replace with the server's port number
     # establish connection with server
     client.connect((server_ip, server_port))
 
     while True:
         # input message and send it to the server
         msg = input("Enter message: ")
+        
         client.send(msg.encode("utf-8")[:1024])
 
         # receive message from the server

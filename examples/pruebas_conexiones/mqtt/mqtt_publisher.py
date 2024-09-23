@@ -23,7 +23,8 @@ mqttc = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 mqttc.on_publish = on_publish
 
 mqttc.user_data_set(unacked_publish)
-mqttc.connect('127.0.0.1', 1883)
+#mqttc.connect('127.0.0.1', 1883) #0.tcp.ngrok.io:11492 
+mqttc.connect('0.tcp.ngrok.io', 11492)
 mqttc.loop_start()
 
 # Our application produce some messages

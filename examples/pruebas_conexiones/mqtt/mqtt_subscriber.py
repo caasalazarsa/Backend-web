@@ -4,7 +4,7 @@ import paho.mqtt.client as mqtt
 def on_connect(client, userdata, flags, rc,properties): 
     print("Connected with result  code {0}".format(str(rc)))  
     # Print result of connection attempt
-    client.subscribe("digitest/test1")  
+    client.subscribe("test")  
     # Subscribe to the topic “digitest/test1”, receive any messages published on it
 
 
@@ -16,5 +16,6 @@ client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)  # Create instance of cli
 client.on_connect = on_connect  # Define callback function for successful connection
 client.on_message = on_message  # Define callback function for receipt of a message
 # client.connect("m2m.eclipse.org", 1883, 60)  # Connect to (broker, port, keepalive-time)
-client.connect('127.0.0.1', 1883)
+#client.connect('127.0.0.1', 1883)
+client.connect('0.tcp.ngrok.io', 11492)
 client.loop_forever()  # Start networking daemon
