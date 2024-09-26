@@ -1,0 +1,4 @@
+este es un archivo de ejemplo
+el server deberia crear
+el archivo output1.txt con 
+esta misma información
